@@ -1,0 +1,45 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Mini Chat — JVL</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="chat-app">
+    <aside class="sidebar">
+      <div class="brand">Mini Chat</div>
+
+      <div class="profile">
+        <label for="username">Your name</label>
+        <input id="username" placeholder="Enter your name" />
+        <button id="setNameBtn">Set Name</button>
+      </div>
+
+      <div class="users-section">
+        <h4>Online</h4>
+        <ul id="usersList"></ul>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="chat-header">
+        <div id="roomTitle">Global Chat</div>
+        <div id="status" class="status">Connecting…</div>
+      </header>
+
+      <section id="messages" class="messages"></section>
+
+      <form id="messageForm" class="composer" autocomplete="off">
+        <input id="messageInput" placeholder="Type a message and press Enter" />
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/client.js"></script>
+</body>
+</html>
